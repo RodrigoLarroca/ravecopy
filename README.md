@@ -1,7 +1,7 @@
 # Rave-page-copy
 ## Copia de Rave con fines meramente practicos
 * [Original](https://rave.io/es)
-* [Demo... en proceso]([https://rave.io/es](https://github.com/RodrigoLarroca/ravecopy/tree/main/))
+* [Demo... en proceso](https://github.com/RodrigoLarroca/ravecopy/tree/master)
 
 ![](https://github.com/RodrigoLarroca/ravecopy/blob/master/746shots_so.png)
 ![](https://github.com/RodrigoLarroca/ravecopy/blob/master/447shots_so.png)
