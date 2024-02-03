@@ -1,0 +1,60 @@
+---
+import Equipo from "../components/Equipo.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Sobre nosotros">
+    <div class="flex w-full justify-center m-auto flex-auto z-20 mb-10">
+    <div class="flex flex-col z-10 rounded-xl border border-neutral-500 bg-white bg-opacity-20 mx-20">
+        <h1
+            class="z-10 text-center font-fjallaone mx-10 my-3 text-5xl font-extrabold"
+        >
+            Acerca de nosotros
+        </h1>
+        <h2 class="z-10 mb-5 font-sans mx-52 text-center text-base tracking-tight	 leading-none">
+            Mira Netflix, Disney+, YouTube, Prime Video, HBO Max y más con
+            amigos y familiares mientras chateas y hablas en perfecta
+            sincronización. Rave reúne a las personas para disfrutar de una
+            experiencia de entretenimiento compartida, sin importar la
+            distancia.
+        </h2>
+        <div class="z-10  font-sans mx-52 mb-5 text-sm tracking-tight	 leading-tight">
+            <ul class="z-10">
+                <li class="z-10 mb-1">
+                    - CONÉCTATE con tus amigos por mensajes de texto o voz
+                    mientras miran juntos
+                </li>
+                <li class="z-10 mb-1">
+                    - DISFRUTA haciendo un Video Party de YouTube, Netflix, HBO
+                    Max, Disney+, Prime Video y mucho más
+                </li>
+                <li class="z-10 mb-1">
+                    - ESCUCHA música con personas de cualquier parte del mundo
+                </li>
+                <li class="z-10 mb-1">
+                    - COMPARTE tus videos a Google Drive para noches de cine
+                    globales
+                </li>
+                <li class="z-10 mb-1">
+                    - SINCRONIZA tus móviles y crea un sistema de altavoces
+                    instantáneo
+                </li>
+                <li class="z-10 mb-1">
+                    - ÚNETE a amigos en iOS, otros dispositivos e incluso en
+                    realidad virtual
+                </li>
+                <li class="z-10 mb-5">
+                    - CREA tus propios mashups mezclando tus videos de música
+                    favoritos con RaveDJ
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <div class="z-50 flex flex-col justify-center justify-items-center	items-center">
+        <h1 class="z-10 text-center items-center text-5xl font-extrabold tracking-tight mb-5">
+            Nuestro Equipo
+        </h1>
+        <Equipo />
+    </div>
+</Layout>

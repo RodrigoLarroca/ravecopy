@@ -1,6 +1,6 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import Footerc from "../components/Footerc.astro";
+import Headerc from "../components/Headerc.astro";
 
 interface Props {
 	title: string;
@@ -20,16 +20,14 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<video class="fixed z-0 size-full object-cover" autoplay="" muted="" loop="" playsinline="" id="videoBG" >
-			<source src="https://img.prod.wemesh.com/static/videos/bgvideo.mp4" type="video/mp4">
-			</video>
+		<div class="fixed top-0 z-[-2] size-full bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
 		
 		
 		<main class="z-1  max-w-full px-4 m-auto">
-			<Header />
+			<Headerc />
 		<slot />
 		</main>
-		<Footer />
+		<Footerc />
 	</body>
 </html>
 <style is:global>

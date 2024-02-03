@@ -1,0 +1,67 @@
+---
+
+const TAGS = {
+    COMUNICACION: {
+    name: "MENSAJE Y HABLAR",
+    descrip: "¡Envía mensajes de texto a tus amigos o habla a través de VoIP mientras ves tus películas o videos musicales favoritos!",
+    icon: "/public/chat.png",
+},
+
+    SINCRONIZACION: {
+        name: "SINCRONIZACIÓN PERFECTA",
+        descrip: "Sincroniza un número ilimitado de dispositivos móviles, cercanos o lejanos. Convierte un grupo de teléfonos en un sistema de altavoces instantáneo.",
+        icon: "/public/Sincro.png",
+    },
+    VOTACION: {
+        name: "VOTACIÓN",
+        descrip: "Todos tienen derecho a elegir lo que se reproduce a continuación. Tu Rave es como tu propio canal",
+        icon: "/public/Positivo.png",
+    },
+    MULTIMEDIA: {
+        name: "MULTIMEDIA",
+        descrip: "Mira videos de Netflix, YouTube, Amazon Prime, Disney+, Google Drive y Vimeo.",
+        icon: "/public/play.png",
+    },
+    FIESTAS: {
+        name: "FIESTAS DE PELÍCULAS Y KARAOKE",
+        descrip: "¡Organizar fiestas de cine es tan simple como subir un video e invitar a tus amigos a unirse! La sincronización perfecta y la VoIP de baja latencia permiten fiestas de karaoke internacionales.",
+        icon: "/public/music.png",
+    },
+    SOCIAL: {
+        name: "SOCIALÍZATE",
+        descrip: "Disfruta de tus videos favoritos con amigos mientras conoces a otras personas de todo el mundo. Continúa expandiendo tu red conectando con otros que comparten los mismos intereses que tú.",
+        icon: "/public/users.png",
+    },
+};
+
+
+
+const PROJECTS = [
+    {
+        tags: [TAGS.COMUNICACION,TAGS.SINCRONIZACION,TAGS.VOTACION,TAGS.MULTIMEDIA,TAGS.FIESTAS,TAGS.SOCIAL],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ tags }) => (
+        <article class="flex flex-auto z-10 mt-10  justify-center  items-center w-full">
+            <ul class="z-10  flex-wrap gap-2 justify-center mx-20 items-center grid grid-cols-3">
+                {tags.map((tag) => (
+                    <li class="flex-grow-0 flex mx-4 text-center justify-center  self-start  items-center">
+                        <span class="flex flex-col items-center min-h-56  text-sm md:text-base">
+                            <img src={tag.icon} alt={tag.name} class="w-16 h-16" />
+                            <span class="text-lg  my-1 font-fjallaone">{tag.name}</span>
+                            <span class="font-sans font-semibold">{tag.descrip}</span>
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        </article>
+    ))
+}
+
+
+
+
+  

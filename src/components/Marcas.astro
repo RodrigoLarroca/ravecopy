@@ -1,0 +1,72 @@
+---
+const TAGS = {
+    WS: {
+        icon: "/public/marcas/wsj-82632a336f.webp",
+        className: "w-6/12",
+    },
+    ST: {
+        icon: "/public/marcas/thesundaytimes-f40c4260e8.webp",
+        className: "w-2/12",
+    },
+    BF: {
+        icon: "/public/marcas/buzzfeed-b67c063181.webp",
+        className: "w-3/12",
+    },
+    TR: {
+        icon: "/public/marcas/techradar-f82413067d.webp",
+        className: "w-3/12",
+    },
+    EL: {
+        icon: "/public/marcas/elle-df1484c511.webp",
+        className: "w-2/12",
+    },
+    TNW: {
+        icon: "/public/marcas/thenextweb-4a5e40803f.webp",
+        className: "w-1/12",
+    },
+    HP: {
+        icon: "/public/marcas/huffpost-7ce5daab12.webp",
+        className: "w-2/12",
+    },
+    TW: {
+        icon: "/public/marcas/techwiser-e92bd1f710.webp",
+        className: "w-2/12",
+    },
+    AA: {
+        icon: "/public/marcas/androidauthority-f43e23feb1.webp",
+        className: "w-4/12",
+    },
+    YA: {
+        icon: "/public/marcas/yahoo-4d62058fc6.webp",
+        className: "w-2/12",
+    },
+    TG: {
+        icon: "/public/marcas/tomsguide-ebdc055de9.webp",
+        className: "w-2/12",
+    },
+    PN: {
+        icon: "/public/marcas/purewow-100c637b25.webp",
+        className: "w-2/12",
+    },
+    MS: {
+        icon: "/public/marcas/mobilesyrup-760ac0aaf1.webp",
+        className: "w-4/12",
+    },
+};
+
+const PROJECTS = [
+    {
+        tags: [TAGS.WS, TAGS.ST, TAGS.BF, TAGS.TR, TAGS.EL, TAGS.TNW, TAGS.HP, TAGS.TW, TAGS.AA, TAGS.YA, TAGS.TG, TAGS.PN, TAGS.MS],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ tags }) => (
+        <article class="z-10 flex mt-10 justify-center items-center gap-x-6 gap-y-12 flex-wrap align-middle">
+            {tags.map((tag) => (
+                <img src={tag.icon} class={`${tag.className}`} />  
+            ))} 
+        </article>
+    ))
+}

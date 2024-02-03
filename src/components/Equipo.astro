@@ -1,0 +1,66 @@
+---
+
+const TAGS = {
+    PEDRO: {
+        name: "PEDRO PASCAL",
+        puesto: "Director Ejecutivo",
+        icon: "/public/Pedro.jpg",
+    },
+    ALEJO: {
+        name: "ALEJO VALENTIN",
+        puesto: "Director de Tecnología",
+        icon: "/public/Alejo.jpg",
+    },
+    MARTA: {
+        name: "MARTA CALOR",
+        puesto: "Jefe de equipo Android e iOS",
+        icon: "/public/Marta.jpg",
+    },
+    ADAM: {
+        name: "ADAM SADLER",
+        puesto: "Desarrollador",
+        icon: "/public/Adam.jpg",
+    },
+    SOFIA: {
+        name: "SOFIA VERGO",
+        puesto: "Desarrollador",
+        icon: "/public/Sofia.jpg",
+    },
+    ROSA: {
+        name: "ROSA MELTRO",
+        puesto: "Desarrollador",
+        icon: "/public/Rosa.jpg",
+    },
+};
+
+
+
+const PROJECTS = [
+    {
+        tags: [TAGS.PEDRO,TAGS.ALEJO,TAGS.MARTA,TAGS.SOFIA,TAGS.ROSA,TAGS.ADAM],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ tags }) => (
+        <article class="flex flex-auto mb-4 z-10 justify-center w-full">
+            <ul class="z-10 w-full flex-wrap gap-2 justify-center grid grid-cols-3">
+                {tags.map((tag) => (
+                    <li class="flex-grow-0 flex justify-center items-center">
+                        <span class="flex flex-col items-center w-54 h-48 md:w-36 md:h-54 rounded-full text-sm md:text-base mb-1">
+                            <img src={tag.icon} alt={tag.name} class="rounded-full w-full h-full object-cover" />
+                            <span class="text-lg my-1 font-fjallaone">{tag.name}</span>
+                            <span class="text-xs font-fjallaone">{tag.puesto}</span>
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        </article>
+    ))
+}
+
+
+
+
+  

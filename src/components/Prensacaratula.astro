@@ -1,0 +1,59 @@
+---
+
+const TAGS = {
+    COMPAÑIA: {
+        name: "COMPAÑÍA",
+        descrip: "RaveCopy Inc.",
+    },
+    ANDROID: {
+        name: "ANDROID",
+        descrip: "Requiere Android 6 o posterior",
+    },
+    SITIOWEB: {
+        name: "SITIO WEB:",
+        descrip: "RaveCopy.dev",
+    },
+    WINDOWS: {
+        name: "WINDOWS",
+        descrip: "Requiere Windows 10 o posterior",
+    },
+    IOS: {
+        name: "IOS",
+        descrip: "Requiere iOS 13 o posterior",
+    },
+    CONTACTO: {
+        name: "CONTACTO PARA CONSULTAS DE PRENSA:",
+        descrip: "Rodrigo Larroca: rodrigolarroca840@gmail.com",
+    },
+};
+
+
+
+const PROJECTS = [
+    {
+        tags: [TAGS.COMPAÑIA,TAGS.ANDROID,TAGS.SITIOWEB,TAGS.WINDOWS,TAGS.IOS,TAGS.CONTACTO],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ tags }) => (
+        <article class="flex flex-auto z-10 mt-10 mx-20  justify-center align-middle items-center w-full">
+            <ul class="z-10 w-full flex-wrap gap-2 justify-center align-middle items-center grid grid-cols-3">
+                {tags.map((tag) => (
+                    <li class="flex-grow-0 mb-8 w-full  flex justify-center items-center align-middle ">
+                        <span class="flex m-auto mx-6 w-full justify-center items-center flex-col align-middle">
+                            <span class="text-xl  justify-center items-center font-fjallaone align-middle">{tag.name}</span>
+                            <span class="text-sm  justify-center items-center font-fjallaone align-middle">{tag.descrip}</span>
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        </article>
+    ))
+}
+
+
+
+
+  
